@@ -10,7 +10,34 @@ const sizes: any = {
   vvhd: 1650
 };
 
-export const presets = {
+interface IPreset {
+  mobile?: any;
+  tablet?: any;
+  desktop?: any;
+  hd?: any;
+  vhd?: any;
+  vvhd?: any;
+
+  maxWidth: number;
+  maxWidthWithSidebar: number;
+  sidebarWidth: string;
+  bodyFontSize: number;
+  padding: string;
+
+  sidebar: string;
+  brand: string;
+  brandLight: string;
+  brandLighter: string;
+  headerColor: string;
+  headerLinkColor: string;
+  headerHeight: string;
+  footerHeight: string;
+  footerColor: string;
+  accent: string;
+  block: string;
+}
+
+export const presets: IPreset = {
   maxWidth: 36,
   maxWidthWithSidebar: 26,
 
@@ -36,21 +63,14 @@ export const presets = {
 
   block: `
     box-shadow: 0 1px 0 rgba(25, 17, 34, 0.4);
-  `,
-
-  gutters: {
-    default: 1.5,
-    HdR: 2.5,
-    VHdR: 3.5,
-    VVHdR: 4.5
-  }
+  `
 };
 
-Object.keys(sizes).reduce((acc, label) => {
+Object.keys(sizes).reduce((acc: any, label: string) => {
   const emSize = sizes[label] / presets.bodyFontSize;
-  acc[label] = (...args) => css`
+  acc[label] = (...args: any[]) => css`
   @media (min-width: ${emSize}em) {
-    ${css(...args)}
+    ${css(args[0], ...args)}
   }
   `;
   return acc;

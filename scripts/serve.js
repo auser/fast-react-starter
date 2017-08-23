@@ -10,6 +10,7 @@ const webpackConfig = require('../config/webpack.config.dev.js');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const templateMiddleware = require('./utils/templateMiddleware');
+const historyApiFallback = require('connect-history-api-fallback');
 
 const bs = browserSync.create();
 const compiler = webpack(webpackConfig);
@@ -34,7 +35,14 @@ const devMiddleware = webpackDevMiddleware(compiler, {
   }
 });
 
-const defaultMiddlewares = [templateMiddleware, devMiddleware, hotMiddleware];
+const historyApiFallbackMiddleware = historyApiFallback();
+
+const defaultMiddlewares = [
+  historyApiFallbackMiddleware,
+  templateMiddleware,
+  devMiddleware,
+  hotMiddleware
+];
 
 const middlewares = devServConf.firstMiddlewares.concat(
   defaultMiddlewares,

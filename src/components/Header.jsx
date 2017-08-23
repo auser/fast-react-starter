@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import auth from 'lib/auth';
 import {Link} from 'react-router-dom';
 import presets from 'utils/presets';
 import typo from 'utils/typography';
@@ -24,9 +25,18 @@ export const Header = props => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+          {!auth.isAuthenticated() &&
+            <li>
+              <Link to="/login">Login</Link>
+            </li>}
+          {!auth.isAuthenticated() &&
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>}
+          {auth.isAuthenticated() &&
+            <li>
+              <Link to="/logout">Logout</Link>
+            </li>}
         </ul>
       </LinksWrapper>
     </div>
@@ -43,13 +53,13 @@ align-items: center;
 a {
   color: ${presets.headerLinkColor};
   text-decoration: none;
-  font-size: ${rhythm(1)};
+  font-size: ${rhythm(3 / 5)};
 }
 ul {
   list-style: none;
   li {
     display: inline;
-    padding: ${presets.padding};
+    padding: ${rhythm(1 / 5)};
   }
 }
 `;

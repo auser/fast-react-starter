@@ -6,7 +6,7 @@ import {compose} from 'recompose';
 
 import withHeader from 'hocs/withHeader';
 
-export const Home = props => {
+export const About = props => {
   return (
     <div className={props.className}>
       <Helmet title={'About'} />
@@ -15,6 +15,6 @@ export const Home = props => {
   );
 };
 
-export default compose(withHeader)(styled(Home)`
+export default compose(withHeader)(styled(About)`
 width: 100%;
 `);

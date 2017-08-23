@@ -1,6 +1,6 @@
 module.exports = {
   historyAPIFallback: true,
-  port: 8080,
+  port: 3000,
   tunnel: false,
   xip: false,
   offline: false,
