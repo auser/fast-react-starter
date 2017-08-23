@@ -13,9 +13,7 @@ interface Props {
 export const Card = ({children, className}: Props) => {
   return (
     <div className={className}>
-      <div className="content">
-        {children}
-      </div>
+      {children}
     </div>
   );
 };
@@ -23,8 +21,9 @@ export const Card = ({children, className}: Props) => {
 export default styled(Card)`
 box-sizing: border-box;
 display: flex;
-flex: 0 0 50%;
-max-width: 50%;
+flex: 0 0 100%;
+max-width: 100%;
+flex-direction: column;
 justify-content: center;
 ${presets.mobile`
 flex: 0 0 100%;
@@ -32,8 +31,7 @@ flex: 0 0 100%;
 ${presets.tablet`
 flex: 0 0 50%;
 max-width: 50%;
-&:nth-child(2n) {
-}`}
+`}
 ${presets.desktop`
 flex: 0 0 33.333333%;
 max-width: 33.333333%;
@@ -44,15 +42,4 @@ max-width: 33.333333%;
   border-left: 0;
 }
 `}
-
-.content {
-  ${presets.mobile`
-  `}
-  ${presets.tablet`
-  `}
-  ${presets.vhd`
-  `}
-  ${presets.vvhd`
-  `}
-}
 `;

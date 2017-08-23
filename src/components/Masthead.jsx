@@ -17,8 +17,7 @@ export const Masthead = props => {
 export default styled(Masthead)`
 display: flex;
 flex-direction: column;
-padding-top: ${rhythm(1)};
-padding-bottom: ${rhythm(2)};
+padding: ${rhythm(2)};
 text-align: center;
 justify-content: center;
 box-shadow: 0 1px 0px rgba(25,17,34,1.0);
@@ -26,7 +25,7 @@ background-image: linear-gradient(180deg, ${presets.brandLight}, 75%, ${presets.
 font-family: ${options.headerFontFamily.join(',')};
 h1, div {
   color: #fff;
-  padding: 0;
+  padding: 5px;
   margin: 0;
 }
 `;

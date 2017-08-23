@@ -46,6 +46,12 @@ export const Home = props => {
 
 export default compose(withHeader)(styled(Home)`
 width: 100%;
+text-align: center;
 h2 {
+  font-size: 1.1em;
+  font-weight: lighter;
+}
+p {
+  font-size: 0.9em;
 }
 `);
