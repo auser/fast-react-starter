@@ -36,7 +36,7 @@ export const Header = props => {
 export default styled(Header)`
 display: flex;
 padding: ${presets.padding};
-background: ${presets.headerColor};
+background: ${presets.brandLight};
 height: ${presets.headerHeight};
 justify-content: space-between;
 align-items: center;

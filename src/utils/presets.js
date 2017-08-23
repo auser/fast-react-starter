@@ -27,7 +27,7 @@ export const presets = {
 
   headerColor: 'rgba(99, 50, 173, 1.000)',
   headerLinkColor: '#ffffff',
-  headerHeight: '4.5em',
+  headerHeight: '3.5em',
 
   footerHeight: '4.5em',
   footerColor: 'rgba(255, 255, 255, 1.000)',
