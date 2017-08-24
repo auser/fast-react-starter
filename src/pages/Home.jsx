@@ -8,8 +8,7 @@ import withHeader from 'hocs/withHeader';
 import Masthead from 'components/Home/Masthead';
 import WhatIsIt from 'components/Home/WhatIsIt';
 import SignupBanner from 'components/Home/SignupBanner';
-// import Cards from 'components/Cards/Cards';
-// import Card from 'components/Cards/Card';
+import Features from 'components/Home/Features';
 
 export const Home = props => {
   return (
@@ -18,6 +17,7 @@ export const Home = props => {
       <Masthead />
       <WhatIsIt />
       <SignupBanner />
+      <Features />
     </div>
   );
 };
