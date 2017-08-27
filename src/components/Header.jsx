@@ -25,6 +25,9 @@ export const Header = props => {
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li>
+            <Link to="/courses">Courses</Link>
+          </li>
           {!auth.isAuthenticated() &&
             <li>
               <Link to="/login">Login</Link>

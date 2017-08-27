@@ -1,7 +1,6 @@
 const contents = {
   title: 'newline.co',
-  description: 'Learn blockchain',
-  message: 'Woot'
+  description: 'Learn blockchain'
 };
 
 const pages = [

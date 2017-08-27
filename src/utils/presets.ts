@@ -61,9 +61,7 @@ export const presets: IPreset = {
 
   accent: `#FF852F`,
 
-  block: `
-    box-shadow: 0 1px 0 rgba(25, 17, 34, 0.4);
-  `
+  block: `box-shadow: 0 1px 0 rgba(25, 17, 34, 0.4);`
 };
 
 Object.keys(sizes).reduce((acc: any, label: string) => {
