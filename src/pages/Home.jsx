@@ -9,6 +9,7 @@ import Masthead from 'components/Home/Masthead';
 import WhatIsIt from 'components/Home/WhatIsIt';
 import SignupBanner from 'components/Home/SignupBanner';
 import Features from 'components/Home/Features';
+import Pricing from 'components/Home/Pricing';
 
 export const Home = props => {
   return (
@@ -18,6 +19,7 @@ export const Home = props => {
       <WhatIsIt />
       <SignupBanner />
       <Features />
+      <Pricing />
     </div>
   );
 };

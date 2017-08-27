@@ -7,6 +7,7 @@ const {rhythm, options} = typo;
 export const Masthead = props => {
   return (
     <div className={props.className}>
+      <div className="slanted" />
       <h1>Masthead</h1>
       <div>Do you want to learn?</div>
       <div>Signup form</div>

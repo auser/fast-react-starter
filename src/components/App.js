@@ -28,6 +28,7 @@ export const App = props => {
 export default styled(App)`
 display: flex;
 width: 100%;
+height: 100%;
 > div {
   width: 100%;
 }

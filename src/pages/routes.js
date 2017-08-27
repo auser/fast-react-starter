@@ -20,4 +20,5 @@ export const Routes = props => {
 
 export default styled(Routes)`
 width: 100%;
+height: 100%;
 `;
